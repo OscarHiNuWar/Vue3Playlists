@@ -31,3 +31,6 @@ coverage
 firestore.rules
 storage.rules
 /firebase/config.js
+
+/.vscode/
+/.firebase/
