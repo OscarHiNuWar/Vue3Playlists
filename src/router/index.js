@@ -6,6 +6,10 @@ import CreatePlaylist from '../views/playlists/createPlaylist.vue'
 import HomeView from '../views/HomeView.vue'
 import playlistDetailsVue from '../views/playlists/playlistDetails.vue'
 import UserPlaylistsVue from '../views/playlists/UserPlaylists.vue'
+import CreateProfesorVue from '../views/profesor/CreateProfesor.vue'
+import CreateClaseVue from '../views/profesor/CreateClase.vue'
+import CreateEvaluacionVue from '../views/profesor/CreateEvaluacion.vue'
+import CreatePreguntasVue from '../views/profesor/CreatePreguntas.vue'
 
 
 const requireAuth = (to, from, next)=> {
@@ -53,6 +57,30 @@ const router = createRouter({
       path: '/playlists/user',
       name: 'UserPlaylists',
       component: UserPlaylistsVue,
+      beforeEnter: requireAuth
+    },
+    {
+      path: '/profesor/create',
+      name: 'CreateProfesor',
+      component: CreateProfesorVue,
+      beforeEnter: requireAuth
+    },
+    {
+      path: '/clase/create',
+      name: 'CreateClase',
+      component: CreateClaseVue,
+      beforeEnter: requireAuth
+    },
+    {
+      path: '/evaluaciones/create',
+      name: 'CreateClase',
+      component: CreateEvaluacionVue,
+      beforeEnter: requireAuth
+    },
+    {
+      path: '/preguntas/create',
+      name: 'CreatePreguntas',
+      component: CreatePreguntasVue,
       beforeEnter: requireAuth
     }
   ]
